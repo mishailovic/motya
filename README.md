@@ -5,6 +5,8 @@
     <img alt="Made with Python" src="https://img.shields.io/badge/Made%20with-Python-%23FFD242?logo=python&logoColor=white">
     <img alt="Repo size" src="https://img.shields.io/github/repo-size/mishailovic/motya">
     <img alt="Code style: black" src="https://img.shields.io/badge/code%20style-black-000000.svg">
+    [![GitHub stars](https://img.shields.io/github/stars/Naereen/StrapDown.js.svg?style=social&label=Star&maxAge=2592000)](https://GitHub.com/mishailovic/motya/stargazers/)
+
 </p>
 
    Motya - генератор демотиваторов на python. Все что вам нужно это установить модуль pillow из pip и наслаждаться его работой. Берет рандомную картинку из папки "images" и прилепляет на нее рандомный текст из файла "phrases.txt" (Если в папке и в файле только одна картинка и один текст, то будет использовать только их. Сохраняет готовое изображение в файл result.png, если таковой уже есть - то перезаписывает. Наслаждайтесь.
