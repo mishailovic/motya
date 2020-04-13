@@ -24,13 +24,13 @@
    <h3>Для Android</h3>
 
    Установите приложение [Termux](https://play.google.com/store/apps/details?id=com.termux), запустите его и введите следующие команды поочерёдно:
-     ```sh
+     ```
      pkg install python
      ```
 
 ## Введите следующие команды (только для termux и linux) ([куда?](http://comp-profi.com/kak-vyzvat-komandnuyu-stroku-ili-konsol-windows/)):
 
-```sh
+```
 git clone https://github.com/mishailovic/motya.git
 cd motya
 pip3 intsall pillow
