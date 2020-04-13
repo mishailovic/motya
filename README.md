@@ -28,7 +28,7 @@
      pkg install python
      ```
 
-## Введите следующие команды (только для termux и linux) ([куда?](http://comp-profi.com/kak-vyzvat-komandnuyu-stroku-ili-konsol-windows/)):
+## Введите следующие команды (только для termux и linux) ([куда?](https://www.vseprolinux.ru/kak-otkryt-terminal-v-linuks)):
 
 ```
 git clone https://github.com/mishailovic/motya.git
