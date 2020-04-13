@@ -33,7 +33,7 @@
 ```
 git clone https://github.com/mishailovic/motya.git
 cd motya
-pip3 intsall pillow
+pip3 install pillow
 ```
 
 ## 🚩 Запуск
