@@ -29,7 +29,7 @@
      pkg install python
      ```
 
-2. Введите следующую команду ([куда?](http://comp-profi.com/kak-vyzvat-komandnuyu-stroku-ili-konsol-windows/)):
+2. Введите следующие команды ([куда?](http://comp-profi.com/kak-vyzvat-komandnuyu-stroku-ili-konsol-windows/)):
 
 ```sh
 git clone https://github.com/mishailovic/motya.git
