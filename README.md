@@ -18,17 +18,10 @@
 
    <h3>Для Windows</h3>
 
-   Просто скачайте последний релиз из вкладки [релизов](https://github.com/mishailovic/motya/releases)
+   Скачайте установщик с [официального сайта](https://www.python.org/downloads/) и запустите его. Убедитесь, что при установке отметили галочку ![Add Python to PATH](https://user-images.githubusercontent.com/42045258/69171091-557d2780-0b0c-11ea-8adf-7f819357f041.png)
     
 
-   <h3>Для Android</h3>
-
-   Установите приложение [Termux](https://play.google.com/store/apps/details?id=com.termux), запустите его и введите следующие команды поочерёдно:
-     ```
-     pkg install python
-     ```
-
-## Введите следующие команды (только для termux и linux) ([куда?](https://www.vseprolinux.ru/kak-otkryt-terminal-v-linuks)):
+## Введите следующие команды (для linux в терминал, а на windows в cmd, если на windows пишет что нету git`а, то скачайте программу со вкладки релизов.)
 
 ```
 git clone https://github.com/mishailovic/motya.git
