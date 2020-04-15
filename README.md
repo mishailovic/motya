@@ -42,5 +42,7 @@ pip3 install pillow
 
 [Даниил Николаев](https://github.com/nm17)
 
+Inspiration: [Тёма](http://github.com/temaalfer)
+
 Ваш вклад неоценим.
  
