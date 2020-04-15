@@ -44,5 +44,5 @@ pip3 install pillow
 
 Inspiration: [Тёма](http://github.com/temaalfer)
 
-Ваш вклад неоценим. :3
+Ваш вклад неоценим.
  
