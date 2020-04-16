@@ -29,6 +29,8 @@
    
    pip install pillow
    
+   ```
+   
 
 
 
