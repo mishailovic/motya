@@ -20,6 +20,17 @@
 
    Скачайте установщик с [официального сайта](https://www.python.org/downloads/) и запустите его. Убедитесь, что при установке отметили галочку ![Add Python to PATH](https://user-images.githubusercontent.com/42045258/69171091-557d2780-0b0c-11ea-8adf-7f819357f041.png)
     
+   <h3>Для Termux</h3>
+   
+   ```
+   termux-setup-storage
+   
+   pkg install python clang freetype libjpeg-turbo -y
+   
+   pip install pillow
+   
+
+
 
 ## Введите следующие команды (для linux в терминал, а на windows в cmd, если на windows пишет что нету git`а, то скачайте программу со вкладки релизов.)
 
