@@ -19,6 +19,17 @@ def register(cb):
 class Motya(loader.Module):
     """Простой и крутой (\U0001F60E) генератор демотиваторов.
 Чат и помощь в @motyachat"""
+    # Сообщения
+    messages = {
+    'init': '<code>Подготовка Моти)</code>',
+    'usage': '<code>.help Motya</code> для помощи',
+    'processing': '<code>Обработка...</code>',
+    'er_type': '<code>Тип файла не поддерживается, используйте фото или стикеры</code>',
+    'er_template': '<code>Произошла ошибка на этапе получения темплейта</code>',
+    'er_font': '<code>Шрифт сказал идти подальше</code>',
+    'er_send': '<code>Ошибка при отправке(</code>',
+    'processing1': '<code>Обработка..</code>'
+    }
 
     def __init__(self):
         self.name = _("Motya")
@@ -31,9 +42,11 @@ class Motya(loader.Module):
         self._me = await client.get_me()
 
     async def motyacmd(self, message):
-        """Ответьте на картинку или стикер для получения демотиватора (требует текст)"""
+        """Ответьте текстом на картинку или стикер для получения демотиватора"""
 
         # Переменные
+        prename = "premotya.png"
+        name = "motya.png"
         mot_template = 'template.jpg'
         UPPER_FONT = 'times.ttf'
         UPPER_SIZE = 45
@@ -42,8 +55,6 @@ class Motya(loader.Module):
         TEMPLATE_HEIGHT = 522
         TEMPLATE_COORDS = (75, 45, 499, 373)
         PADDING = 10
-        prename = "premotya.png"
-        name = "motya.png"
 
         # Удаление предыдущих файлов, если таковые присутствуют
         if os.path.isfile(prename): os.remove(prename)
@@ -52,47 +63,46 @@ class Motya(loader.Module):
         if os.path.isfile(UPPER_FONT): os.remove(UPPER_FONT)
 
         # Скачивание
-        await message.edit(_("<code>Подготовка Моти)</code>"))
+        await message.edit(_(self.messages['init']))
         try:
             url = 'https://raw.githubusercontent.com/mishailovic/motya-cli/master/template.jpg'
             r = requests.get(url, allow_redirects=True)
             open('template.jpg', 'wb').write(r.content)
         except:
-            await message.edit(_("<code>Произошла ошибка на этапе получения темплейта</code>"))
+            await message.edit(_(self.messages['er_template']))
 
         try:
             url2 = 'https://github.com/mishailovic/motya-cli/blob/master/times.ttf?raw=true'
             r2 = requests.get(url2, allow_redirects=True)
             open('times.ttf', 'wb').write(r2.content)
         except:
-            await message.edit(_("<code>Шрифт сказал идти подальше</code>"))
+            await message.edit(_(self.messages['er_font']))
 
         # Аргументики
         args = utils.get_args_raw(message)
         if not args:
-            await message.edit(_("<code>Использование: .motya {текст}</code>"))
+            await message.edit(_(self.messages['usage']))
             return
 
         # Сохранение файла
         img = await message.get_reply_message()
         if img and img.media:
-            await message.edit(_("<code>Медиа объект получен. В процессе..</code>"))
             photo = io.BytesIO()
             await bot.download_media(img, photo)
         else:
-            await message.edit(_("<code>Мотя требует ответа на смс, спасибо</code>"))
+            await message.edit(_(self.messages['usage']))
             return
 
         if photo:
-            await message.edit(_("<code>Обработка...</code>"))
+            await message.edit(_(self.messages['processing']))
             try:
                 image = Image.open(photo)
             except OSError:
-                await message.edit(_("<code>Тип файла не поддерживается, используйте фото или стикеры</code>"))
+                await message.edit(_(self.messages['er_type']))
                 return
             image.save(prename, "PNG")
             image.close()
-            await message.edit(_("<code>Фото сохранено, мотя идет в дело...</code>"))
+            await message.edit(_(self.messages['processing1']))
 
         # Собственно Мотя
         def draw_x_axis_centered_text(image, text, font, size, pos_y):
@@ -118,7 +128,7 @@ class Motya(loader.Module):
 
         # Отправка
         make_image()
-        await message.edit(_("<code>Отправка фотографии, ожидание</code>"))
+        await message.edit(_(self.messages['processing']))
         try:
             await img.client.send_file(entity = await img.client.get_input_entity(img.chat_id), file=name)
         except:
