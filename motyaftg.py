@@ -32,24 +32,25 @@ class Motya(loader.Module):
 
     async def motyacmd(self, message):
         """Ответьте на картинку или стикер для получения демотиватора (требует текст)"""
+
         # Переменные
         mot_template = 'template.jpg'
         UPPER_FONT = 'times.ttf'
         UPPER_SIZE = 45
         UPPER_FONT_Y = 390
-
         TEMPLATE_WIDTH = 574
         TEMPLATE_HEIGHT = 522
         TEMPLATE_COORDS = (75, 45, 499, 373)
         PADDING = 10
-
         prename = "premotya.png"
         name = "motya.png"
+
         # Удаление предыдущих файлов, если таковые присутствуют
         if os.path.isfile(prename): os.remove(prename)
         if os.path.isfile(name): os.remove(name)
         if os.path.isfile(mot_template): os.remove(mot_template)
         if os.path.isfile(UPPER_FONT): os.remove(UPPER_FONT)
+
         # Скачивание
         await message.edit(_("<code>Подготовка Моти)</code>"))
         try:
@@ -65,17 +66,12 @@ class Motya(loader.Module):
             open('times.ttf', 'wb').write(r2.content)
         except:
             await message.edit(_("<code>Шрифт сказал идти подальше</code>"))
+
         # Аргументики
-        args = utils.get_args(message)
-        if len(args) < 1:
+        args = utils.get_args_raw(message)
+        if not args:
             await message.edit(_("<code>Использование: .motya {текст}</code>"))
             return
-        else:
-            args = str(args)
-            args = args.replace('[', '')
-            args = args.replace(']', '')
-            args = args.replace(',', '')
-            args = args.replace("'", "")
 
         # Сохранение файла
         img = await message.get_reply_message()
@@ -97,6 +93,7 @@ class Motya(loader.Module):
             image.save(prename, "PNG")
             image.close()
             await message.edit(_("<code>Фото сохранено, мотя идет в дело...</code>"))
+
         # Собственно Мотя
         def draw_x_axis_centered_text(image, text, font, size, pos_y):
             draw = ImageDraw.Draw(image)
@@ -119,6 +116,7 @@ class Motya(loader.Module):
             draw_x_axis_centered_text(frame, args, UPPER_FONT, UPPER_SIZE, UPPER_FONT_Y)
             frame.save(name, "PNG")
 
+        # Отправка
         make_image()
         await message.edit(_("<code>Отправка фотографии, ожидание</code>"))
         try:
@@ -127,6 +125,7 @@ class Motya(loader.Module):
             await message.edit(_("<code>Ошибка при отправке(</code>"))
         await message.delete()
 
+        # ещё одна чистка
         if os.path.isfile(prename): os.remove(prename)
         if os.path.isfile(name): os.remove(name)
         if os.path.isfile(mot_template): os.remove(mot_template)
