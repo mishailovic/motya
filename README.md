@@ -30,8 +30,16 @@
    pip install pillow
    
    ```
+   <h3>Модуль для юзербота friendly telegram</h3>
    
-
+   Чтобы установить или обновить модуль используйте команду:
+   
+   ```
+   .dlmod https://github.com/mishailovic/motya/raw/master/motyaftg.py
+   
+   ```
+ 
+ 
 
 
 ## Введите следующие команды (для linux в терминал, а на windows в cmd, если на windows пишет что нету git`а, то скачайте программу со вкладки релизов.)
