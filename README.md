@@ -50,12 +50,14 @@ pip3 install pillow
 
 Хочу выразить огромное спасибо всем тем кто работал над этим проектом вместе со мной а именно это:
 
-[Crinny](https://github.com/crinny)
+Code optimization: [Crinny](https://github.com/crinny)
 
 
-[Даниил Николаев](https://github.com/nm17)
+Main code: [Даниил Николаев](https://github.com/nm17)
 
 Inspiration: [Тёма](http://github.com/temaalfer)
+
+FTG module: [Demenkop](https://github.com/demenkop)
 
 Ваш вклад неоценим.
  
