@@ -54,6 +54,28 @@ pip3 install pillow
 
 Всё просто! (Предварительно закидываем свои картинки(у) и фразы(у) в соответствующий файл и папку) далее вводим команду `python3 motya.py` или `python motya.py`, и ваш демотиватор готов!
 
+### Дока
+
+**Usage**:
+
+```console
+$ python motya.py [OPTIONS] [PHRASE] [IMAGE]
+```
+
+**Options**:
+
+* `--template PATH`: Путь к штаблону демотиватора
+* `--images PATH`: Путь к картинкам для мемов
+* `--phrases PATH`: Путь к файлу с фразами
+* `--font PATH`: Путь к шрифту
+* `--font-size INTEGER`: Размер шрифта, по умолчанию 45
+* `--seed TEXT`: Seed для создания картинки
+* `--output PATH`: Куда сохранять мем
+* `--install-completion`: Install completion for the current shell.
+* `--show-completion`: Show completion for the current shell, to copy it or customize the installation.
+* `--help`: Show this message and exit.
+
+
 ## Благодарности
 
 Хочу выразить огромное спасибо всем тем кто работал над этим проектом вместе со мной а именно это:
