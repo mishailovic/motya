@@ -14,10 +14,12 @@ class Motya:
         template: Template,
         phrases: Optional[List[str]] = None,
         images: Optional[List[Image]] = None,
+        font: Optional[Font] = None
     ):
         self.template = template
         self.phrases = phrases
         self.images = images
+        self.font = font
 
     @property
     def random_phrase(self):
@@ -40,8 +42,6 @@ class Motya:
         )
         template_image.paste(demotivator_image, self.template.frame.coords)
 
-        image = Text(phrase or self.random_phrase, font).draw_x_axis_centered_text(
-            self.template.image, self.template.width, padding=self.template.padding
-        )
+        image = Text(phrase or self.random_phrase, self.font or font).draw_x_axis_centered_text(self.template)
 
         return template_image
