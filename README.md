@@ -30,7 +30,7 @@
    
    pkg install python clang freetype libjpeg-turbo -y
    
-   pip install pillow
+   pip install -r requirements.txt
    
    ```
    <h3>Модуль для юзербота friendly telegram</h3>
@@ -50,7 +50,7 @@
 ```
 git clone https://github.com/mishailovic/motya.git
 cd motya
-pip3 install pillow
+pip3 install requirements.txt
 ```
 
 ## 🚩 Запуск
