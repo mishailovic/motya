@@ -78,13 +78,17 @@ $ python motya.py [OPTIONS] [PHRASE] [IMAGE]
 * `--show-completion`: Show completion for the current shell, to copy it or customize the installation.
 * `--help`: Show this message and exit.
 
+## Поддержка разработчиков
+
+Не забудьте поставить звезду проекту, это - лучшая благодарность :3
+
+Если действительно понравилась программа то я принимаю донаты на Liberapay: https://liberapay.com/mishailovic
 
 ## Благодарности
 
 Хочу выразить огромное спасибо всем тем кто работал над этим проектом вместе со мной а именно это:
 
 Code optimization: [Crinny](https://github.com/crinny)
-
 
 Main code: [Даниил Николаев](https://github.com/nm17)
 
