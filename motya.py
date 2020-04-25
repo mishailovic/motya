@@ -19,7 +19,7 @@ app = Typer()
 def create(
     phrase: Path = Argument(None),
     image: Path = Argument(None),
-    template: Path = Option("template.jpg", help="Путь к штаблону демотиватора"),
+    template: Path = Option("template.jpg", help="Путь к штаблону демотиватора"),  # noqa
     images: Path = Option("images/", help="Путь к картинкам для мемов"),
     phrases: Path = Option("phrases.txt", help="Путь к файлу с фразами"),
     font: Path = Option("times.ttf", help="Путь к шрифту"),
@@ -41,7 +41,7 @@ def create(
     file_list = []
     # noinspection PyTypeChecker
     for dirpath, dirnames, filenames in os.walk(images):
-        for filename in [f for f in filenames if f.endswith(("png", "jpg", "jpeg"))]:
+        for filename in [f for f in filenames if f.endswith(("png", "jpg", "jpeg"))]:  # noqa: E501
             # noinspection PyTypeChecker
             file_list.append(Image.open(os.path.join(images, filename)))
 
@@ -51,7 +51,7 @@ def create(
     # noinspection PyTypeChecker
     motya = Motya(
         template=main_template,
-        phrases=list(open(phrases, encoding="utf-8").readlines()) if phrase is None else [phrase],
+        phrases=list(open(phrases, encoding="utf-8").readlines()) if phrase is None else [phrase],  # noqa: E501
         images=list(file_list) if image is None else [Image.open(image)],
         font=font
     )
