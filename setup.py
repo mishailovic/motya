@@ -9,5 +9,5 @@ setup(
     author='mishailovic',
     author_email='',
     description='Motya - генератор демотиваторов на python',
-    install_requires=['Pillow']
+    install_requires=['Pillow', 'typer']
 )
