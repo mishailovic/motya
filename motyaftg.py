@@ -11,12 +11,11 @@ from .. import loader, utils
 
 logger = logging.getLogger(__name__)
 
-
 def register(cb):
-    cb(Motya())
+    cb(MotyaMod())
 
 
-class Motya(loader.Module):
+class MotyaMod(loader.Module):
     """Простой и крутой (\U0001F60E) генератор демотиваторов.
 Чат и помощь в @motyachat"""
 
