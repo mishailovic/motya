@@ -55,7 +55,7 @@ class MotyaMod(loader.Module):
         self.mot_template = 'template.jpg'
         self.upper_font = 'times.ttf'
 
-    async def client_ready(self, client):
+    async def client_ready(self, client, db):
         self.client = client
 
     @loader.unrestricted
