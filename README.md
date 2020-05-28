@@ -96,7 +96,7 @@ Inspiration: [Тёма](http://github.com/temaalfer)
 
 FTG module: [Demenkop](https://github.com/demenkop)
 
-Coding and improvements: [Rfoxxxy](https://github.com/rfoxxxy)
+Coding and improvements: [rfoxxxy](https://github.com/rfoxxxy)
 
 Ваш вклад неоценим.
  
