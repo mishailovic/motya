@@ -50,7 +50,7 @@
 ```
 git clone https://github.com/mishailovic/motya.git
 cd motya
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## 🚩 Запуск
