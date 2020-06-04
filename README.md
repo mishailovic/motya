@@ -98,5 +98,7 @@ FTG module: [Demenkop](https://github.com/demenkop)
 
 Coding and improvements: [rfoxxxy](https://github.com/rfoxxxy)
 
+Фикс зависимостей: [aiexz](https://github.com/aiexz)
+
 Ваш вклад неоценим.
  
