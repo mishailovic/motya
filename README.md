@@ -101,4 +101,9 @@ Coding and improvements: [rfoxxxy](https://github.com/rfoxxxy)
 Фикс зависимостей: [aiexz](https://github.com/aiexz)
 
 Ваш вклад неоценим.
+
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/mishailovic/motya.svg)](https://starchart.cc/mishailovic/motya)
  
