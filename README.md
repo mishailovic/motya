@@ -33,14 +33,7 @@
    pip install -r requirements.txt
    
    ```
-   <h3>Модуль для юзербота friendly telegram</h3>
-   
-   Чтобы установить или обновить модуль используйте команду:
-   
-   ```
-   .dlmod https://github.com/mishailovic/motya/raw/master/motyaftg.py
-   
-   ```
+
  
  
 
