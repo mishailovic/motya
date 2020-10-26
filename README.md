@@ -8,8 +8,6 @@
     <img alt="issues" src="https://img.shields.io/github/issues/mishailovic/motya">
     <img alt="release" src="https://img.shields.io/github/v/release/mishailovic/motya">
 </p>
-
-   Уютный чатик в telegram в котором можно скинуть свои красивые демотиваторы, посмеяться вместе над ними и спросить по поводу ошибок: [Ссылка на чат](https://t.me/motyachat)
    
    
    Motya - генератор демотиваторов на python. Все что вам нужно это установить модуль pillow из pip и наслаждаться его работой.
