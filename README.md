@@ -91,6 +91,8 @@ Coding and improvements: [rfoxxxy](https://github.com/rfoxxxy)
 
 Фикс зависимостей: [aiexz](https://github.com/aiexz)
 
+Веб версия: [DontFluffOnMe](https://github.com/DontFluffOnMe)
+
 Ваш вклад неоценим.
 
 
